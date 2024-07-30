@@ -82,7 +82,7 @@ async function ProductsTable() {
               ) : (
                 <>
                   <span className="sr-only">Unavailable</span>
-                  <XCircle />
+                  <XCircle className="stroke-destructive" />
                 </>
               )}
             </TableCell>
@@ -96,12 +96,12 @@ async function ProductsTable() {
                   <span className="sr-only">Actions</span>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
-                  <DropdownMenuItem>
+                  {/* <DropdownMenuItem>
                     <Link target="_blank" href={`public${product.imagePath}`}>
                       Show Image
                     </Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem>
+                  </DropdownMenuItem> */}
+                  <DropdownMenuItem asChild>
                     <Link href={`/admin/products/${product.id}/edit`}>
                       Edit
                     </Link>
